@@ -79,7 +79,13 @@ table.sourceCode, tr.sourceCode, td.sourceCode, table.sourceCode pre
 td.nums { text-align: right; padding-right: 5px; padding-left: 5px; background-color: #f0f0f0; }
 td.sourceCode { padding-left: 5px; }
 code.sourceCode { background-color: #f8f8f8; }
-pre.sourceCode { background-color: #f8f8f8; line-height: 125% }
+pre.sourceCode {
+  background-color: #f8f8f8;
+  line-height: 125%;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
 td.nums pre { background-color: #f0f0f0; line-height: 125% }
 code.sourceCode span.kw { color: #204a87; font-weight: bold } /* Keyword */
 code.sourceCode span.dt { color: #204a87 } /* Keyword.Type */

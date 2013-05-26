@@ -20,14 +20,14 @@ Comprensión de declaraciones, nombres de variables, espacios en blanco, y otras
 **Declaración simple de variable**
 
 ```javascript
-var foo = 'hello world';
+var foo = 'hola mundo';
 ```
 
 
 **Los espacios en blanco no tienen valor fuera de las comillas**
 
 ```javascript
-var foo =         'hello world';
+var foo =         'hola mundo';
 ```
 
 
@@ -43,7 +43,7 @@ var foo =         'hello world';
 
 ```javascript
 var foo = function() {
-  console.log('hello');
+  console.log('hola');
 };
 ```
 
@@ -61,10 +61,10 @@ Los operadores básicos permiten manipular valores.
 **Concatenación**
 
 ```javascript
-var foo = 'hello';
-var bar = 'world';
+var foo = 'hola';
+var bar = 'mundo';
 
-console.log(foo + ' ' + bar); // la consola de depuración muestra 'hello world'
+console.log(foo + ' ' + bar); // la consola de depuración muestra 'hola mundo'
 ```
 
 
@@ -209,7 +209,7 @@ var bar = false;
 
 if (bar) {
   // este código nunca se ejecutará
-  console.log('hello!');
+  console.log('hola!');
 }
 
 if (bar) {
@@ -243,7 +243,7 @@ Para controlar el flujo adecuadamente, es importante entender qué tipos de valo
 ```javascript
 '0';
 'any string'; // cualquier cadena
-[];  // un arreglo vacío
+[];  // un vector vacío
 {};  // un objeto vacío
 1;   // cualquier número distinto a cero
 ```
@@ -372,7 +372,7 @@ El *cuerpo* es el código a ejecutar en cada repetición del bucle.
 ```javascript
 for (var i = 0, limit = 100; i < limit; i++) {
   // Este bloque de código será ejecutado 100 veces
-  console.log('Currently at ' + i);
+  console.log('Actualmente en ' + i);
   // Nota: el último registro que se mostrará
   // en la consola será "Actualmente en 99"
 }
@@ -434,12 +434,12 @@ do {
   // Incluso cuando la condición sea falsa
   // el cuerpo del bucle se ejecutará al menos una vez.
 
-  alert('Hello');
+  alert('Hola');
 
 } while (false);
 ```
 
-Este tipo de bucles son bastantes atípicos ya que en pocas ocasiones de necesita un bucle que se ejecute al menos una vez. De cualquier forma debe estar al tanto de ellos.
+Este tipo de bucles son bastantes atípicos ya que en pocas ocasiones se necesita un bucle que se ejecute al menos una vez. De cualquier forma debe estar al tanto de ellos.
 
 
 
@@ -472,7 +472,7 @@ for (var i = 0; i < 10; i++) {
 
   // La siguiente declaración será ejecutada
   // si la condición 'something' no se cumple
-  console.log('Hello');
+  console.log('Hola');
 
 }
 ```
@@ -542,69 +542,69 @@ JavaScript posee un número de "palabras reservadas", o palabras que son especia
 
 
 
-## Arreglos
+## Vectores
 
-Los arreglos (en inglés *arrays*) son listas de valores con índice-cero (en inglés *zero-index*), es decir, que el primer elemento del arreglo está en el índice 0. Éstos son una forma práctica de almacenar un conjunto de datos relacionados (como cadenas de caracteres), aunque en realidad, un arreglo puede incluir múltiples tipos de datos, incluso otros arreglos.
+Los vectores (en español también llamados *matrices* o *arreglos* y en inglés *arrays*) son listas de valores con índice-cero (en inglés *zero-index*), es decir, que el primer elemento del vector está en el índice 0. Éstos son una forma práctica de almacenar un conjunto de datos relacionados (como cadenas de caracteres), aunque en realidad, un vector puede incluir múltiples tipos de datos, incluso otros vectores.
 
 
-**Un arreglo simple**
+**Un vector simple**
 
 ```javascript
-var myArray = [ 'hello', 'world' ];
+var myArray = [ 'hola', 'mundo' ];
 ```
 
 
-**Acceder a los ítems del arreglo a través de su índice**
+**Acceder a los ítems del vector a través de su índice**
 
 ```javascript
-var myArray = [ 'hello', 'world', 'foo', 'bar' ];
+var myArray = [ 'hola', 'mundo', 'foo', 'bar' ];
 console.log(myArray[3]);   // muestra en la consola 'bar'
 ```
 
 
-**Obtener la cantidad de ítems del arreglo**
+**Obtener la cantidad de ítems del vector**
 
 ```javascript
-var myArray = [ 'hello', 'world' ];
+var myArray = [ 'hola', 'mundo' ];
 console.log(myArray.length);   // muestra en la consola 2
 ```
 
 
-**Cambiar el valor de un ítem de un arreglo**
+**Cambiar el valor de un ítem de un vector**
 
 ```javascript
-var myArray = [ 'hello', 'world' ];
+var myArray = [ 'hola', 'mundo' ];
 myArray[1] = 'changed';
 ```
 
-*Como se muestra en el ejemplo "Cambiar el valor de un ítem de un arreglo" es posible cambiar el valor de un ítem de un arreglo, sin embargo, por lo general, no es aconsejable.*
+*Como se muestra en el ejemplo "Cambiar el valor de un ítem de un vector" es posible cambiar el valor de un ítem de un vector, sin embargo, por lo general, no es aconsejable.*
 
 
-**Añadir elementos a un arreglo**
+**Añadir elementos a un vector**
 
 ```javascript
-var myArray = [ 'hello', 'world' ];
+var myArray = [ 'hola', 'mundo' ];
 myArray.push('new');
 ```
 
 
-**Trabajar con arreglos**
+**Trabajar con vectores**
 
 ```javascript
-var myArray = [ 'h', 'e', 'l', 'l', 'o' ];
-var myString = myArray.join('');   // 'hello'
-var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ]
+var myArray = [ 'h', 'o', 'l', 'a' ];
+var myString = myArray.join('');   // 'hola'
+var mySplit = myString.split('');  // [ 'h', 'o', 'l', 'a' ]
 ```
 
 
 
 ## Objetos
 
-Los objetos son elementos que pueden contener cero o más conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra o número válido. El valor puede ser cualquier tipo de valor: un número, una cadena, un arreglo, una función, incluso otro objeto.
+Los objetos son elementos que pueden contener cero o más conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra o número válido. El valor puede ser cualquier tipo de valor: un número, una cadena, un vector, una función, incluso otro objeto.
 
 [Definición: Cuando uno de los valores de un objeto es una función, ésta es nombrada como un *método* del objeto.] De lo contrario, se los llama *propiedades*.
 
-Curiosamente, en JavaScript, casi todo es un objeto — arreglos, funciones, números, incluso cadenas — y todos poseen propiedades y métodos.
+Curiosamente, en JavaScript, casi todo es un objeto — vectores, funciones, números, incluso cadenas — y todos poseen propiedades y métodos.
 
 
 **Creación de un "objeto literal"**
@@ -612,14 +612,14 @@ Curiosamente, en JavaScript, casi todo es un objeto — arreglos, funciones, nú
 ```javascript
 var myObject = {
   sayHello: function() {
-    console.log('hello');
+    console.log('hola');
   },
 
   myName: 'Rebecca'
 };
 
 myObject.sayHello();   // se llama al método sayHello,
-                       // el cual muestra en la consola 'hello'
+                       // el cual muestra en la consola 'hola'
 
 console.log(myObject.myName);    // se llama a la propiedad myName,
                                  // la cual muestra en la consola 'Rebecca'
@@ -678,7 +678,7 @@ var greet = function(person, greeting) {
 };
 
 
-greet('Rebecca', 'Hello');  // muestra en la consola 'Hello, Rebecca'
+greet('Rebecca', 'Hola');  // muestra en la consola 'Hola, Rebecca'
 ```
 
 
@@ -690,7 +690,7 @@ var greet = function(person, greeting) {
   return text;
 };
 
-console.log(greet('Rebecca','hello'));   // la función devuelve 'Hello, Rebecca',
+console.log(greet('Rebecca','Hola'));   // la función devuelve 'Hola, Rebecca',
                                          // la cual se muestra en la consola
 ```
 
@@ -704,8 +704,8 @@ var greet = function(person, greeting) {
 };
 
 
-var greeting = greet('Rebecca', 'Hello');
-greeting();  // se muestra en la consola 'Hello, Rebecca'
+var greeting = greet('Rebecca', 'Hola');
+greeting();  // se muestra en la consola 'Hola, Rebecca'
 ```
 
 
@@ -719,7 +719,7 @@ Un patrón común en JavaScript son las funciones anónimas autoejecutables. Est
 
 ```javascript
 (function(){
-  var foo = 'Hello world';
+  var foo = 'Hola mundo';
 })();
 
 
@@ -741,7 +741,7 @@ var myFn = function(fn) {
   console.log(result);
 };
 
-myFn(function() { return 'hello world'; });   // muestra en la consola 'hello world'
+myFn(function() { return 'hola mundo'; });   // muestra en la consola 'hola mundo'
 ```
 
 
@@ -754,17 +754,17 @@ var myFn = function(fn) {
 };
 
 var myOtherFn = function() {
-    return 'hello world';
+    return 'hola mundo';
 };
 
-myFn(myOtherFn);   // muestra en la consola 'hello world'
+myFn(myOtherFn);   // muestra en la consola 'hola mundo'
 ```
 
 
 
 ## Determinación del Tipo de Variable
 
-JavaScript ofrece una manera de poder comprobar el "tipo" (en inglés *type*) de una variable. Sin embargo, el resultado puede ser confuso — por ejemplo, el tipo de un arreglo es "object".
+JavaScript ofrece una manera de poder comprobar el "tipo" (en inglés *type*) de una variable. Sin embargo, el resultado puede ser confuso — por ejemplo, el tipo de un vector es "object".
 
 Por eso, es una práctica común utilizar el operador `typeof` cuando se trata de determinar el tipo de un valor específico.
 
@@ -773,7 +773,7 @@ Por eso, es una práctica común utilizar el operador `typeof` cuando se trata d
 
 ```javascript
 var myFunction = function() {
-  console.log('hello');
+  console.log('hola');
 };
 
 var myObject = {
@@ -782,7 +782,7 @@ var myObject = {
 
 var myArray = [ 'a', 'b', 'c' ];
 
-var myString = 'hello';
+var myString = 'hola';
 
 var myNumber = 3;
 
@@ -796,14 +796,14 @@ typeof null;         // devuelve 'object' -- tenga cuidado
 
 
 if (myArray.push && myArray.slice && myArray.join) {
-    // probablemente sea un arreglo
+    // probablemente sea un vector
     // (este estilo es llamado, en inglés, "duck typing")
 }
 
 if (Object.prototype.toString.call(myArray) === '[object Array]') {
-    // definitivamente es un arreglo;
+    // definitivamente es un vector;
     // esta es considerada la forma más robusta
-    // de determinar si un valor es un arreglo.
+    // de determinar si un valor es un vector.
 }
 ```
 
@@ -940,14 +940,14 @@ Las variables que son declaradas dentro de la función sin la palabra clave `var
 **Funciones tienen acceso a variables definidas dentro del mismo alcance**
 
 ```javascript
-var foo = 'hello';
+var foo = 'hola';
 
 var sayHello = function() {
   console.log(foo);
 };
 
-sayHello();         // muestra en la consola 'hello'
-console.log(foo);   // también muestra en la consola 'hello'
+sayHello();         // muestra en la consola 'hola'
+console.log(foo);   // también muestra en la consola 'hola'
 ```
 
 
@@ -955,11 +955,11 @@ console.log(foo);   // también muestra en la consola 'hello'
 
 ```javascript
 var sayHello = function() {
-  var foo = 'hello';
+  var foo = 'hola';
   console.log(foo);
 };
 
-sayHello();         // muestra en la consola 'hello'
+sayHello();         // muestra en la consola 'hola'
 console.log(foo);   // no muestra nada en la consola
 ```
 
@@ -967,15 +967,15 @@ console.log(foo);   // no muestra nada en la consola
 **Variables con nombres iguales pero valores diferentes pueden existir en diferentes alcances**
 
 ```javascript
-var foo = 'world';
+var foo = 'mundo';
 
 var sayHello = function() {
-  var foo = 'hello';
+  var foo = 'hola';
   console.log(foo);
 };
 
-sayHello();         // muestra en la consola 'hello'
-console.log(foo);   // muestra en la consola 'world'
+sayHello();         // muestra en la consola 'hola'
+console.log(foo);   // muestra en la consola 'mundo'
 ```
 
 
@@ -983,19 +983,19 @@ console.log(foo);   // muestra en la consola 'world'
 
 ```javascript
 var myFunction = function() {
-  var foo = 'hello';
+  var foo = 'hola';
 
   var myFn = function() {
       console.log(foo);
   };
 
-  foo = 'world';
+  foo = 'mundo';
 
   return myFn;
 };
 
 var f = myFunction();
-f();  // registra 'world' -- error
+f();  // registra 'mundo' -- error
 ```
 
 
